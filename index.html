@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>TMinus.org &mdash; Live streamed space things</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-2.0.4/css/bootstrap.min.css" media="all">
+	<link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-2.0.4/css/bootstrap-responsive.min.css" media="all">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="assets/lib/bootstrap-2.0.4/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	
+	<header>
+		<nav class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="/">TMinus.org</a>
+
+					<ul class="nav">
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#channels">
+								Channels
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">NASA JPL on Ustream.tv</a></li>
+								<!-- <li><a href="#">NASA JPL on NASA.gov</a></li>
+								<li><a href="#">SpaceX on Livestream.com</a></li> -->
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<section class="container">
+		<div class="row">
+			<div class="span9">
+				<div class="ustream-wrapper">
+					<iframe src="http://www.ustream.tv/embed/498663?autoplay=true&amp;ub=111111&amp;lc=222222&amp;oc=ffffff&amp;uc=666666" scrolling="no" frameborder="0"></iframe>
+				</div>
+			</div>
+			<div class="span3">
+				<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+				<script>
+				new TWTR.Widget({
+				  version: 2,
+				  type: 'list',
+				  rpp: 30,
+				  interval: 5000,
+				  title: '',
+				  subject: '',
+				  width: 'auto',
+				  height: 480,
+				  theme: {
+				    shell: {
+				      background: 'none',
+				      color: '#666666'
+				    },
+				    tweets: {
+				      background: 'none',
+				      color: '#999999',
+				      links: '#FFFFFF'
+				    }
+				  },
+				  features: {
+				    scrollbar: false,
+				    loop: false,
+				    live: true,
+				    behavior: 'all'
+				  }
+				}).render().setList('kingersoll', 'space').start();
+				</script>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
